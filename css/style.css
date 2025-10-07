@@ -1,79 +1,182 @@
 /* ===== Generelt ===== */
-padding: 5px 10px;
-transition: background-color 0.3s, color 0.3s;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
 }
 
+body {
+    line-height: 1.6;
+    background-color: #fdf7f0; /* lys beige bakgrunn */
+    color: #333;
+    padding: 20px;
+}
+
+/* ===== Header ===== */
+header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+header h1 {
+    font-size: 2.8em;
+    color: #5a4d3c; /* mørk beige/brun for kontrast */
+    margin-bottom: 15px;
+}
+
+header img {
+    border-radius: 50%;
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+    margin-bottom: 15px;
+    box-shadow: 0 4px 10px rgba(90, 77, 60, 0.3);
+}
+
+header p {
+    font-size: 1.1em;
+    margin-bottom: 5px;
+}
+
+/* ===== Navigation ===== */
+nav {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+nav ul {
+    list-style: none;
+    display: inline-flex;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #5a4d3c;
+    font-weight: 600;
+    padding: 8px 15px;
+    border-radius: 8px;
+    background-color: #fff; /* hvite knapper */
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 5px rgba(90, 77, 60, 0.2);
+
+}
 
 nav ul li a:hover {
-background-color: #1a73e8;
-color: #fff;
-border-radius: 5px;
-}
+    background-color: #d6c6b0; /* lys beige hover */
+    color: #5a4d3c;
+    transform: translateY(-2px);
 
+    box-shadow: 0 4px 10px rgba(90, 77, 60, 0.3);}
 
 /* ===== Seksjoner ===== */
 section {
-max-width: 900px;
-margin: auto;
-background-color: #fff;
-padding: 25px;
-border-radius: 10px;
-box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-margin-bottom: 40px;
+    max-width: 950px;
+    margin: auto;
+    background-color: #fff; /* hvit seksjon */
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 8px 15px rgba(90, 77, 60, 0.1);
+    margin-bottom: 50px;
+    transition: transform 0.3s;
 }
 
+section:hover {
+    transform: translateY(-3px);
+}
 
 section h2 {
-color: #1a1a1a;
-margin-bottom: 15px;
-}
+    color: #5a4d3c;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #d6c6b0;
+    display: inline-block;
+    padding-bottom: 5px;
 
+    font-size: 1.8em;}
 
 section p {
-margin-bottom: 15px;
-font-size: 1.05em;
-}
+    margin-bottom: 15px;
+    font-size: 1.1em;
 
+    color: #5a4d3c;}
 
 /* ===== Kodeblokker ===== */
 pre {
-background-color: #272822;
-color: #f8f8f2;
-padding: 15px;
-overflow-x: auto;
-border-radius: 8px;
-margin-bottom: 20px;
-}
+    background-color: #f2e9dc; /* lys beige for kode */
+    color: #5a4d3c; /* mørk tekst */
+    padding: 20px;
+    overflow-x: auto;
+    border-radius: 12px;
+    margin-bottom: 25px;
+    font-size: 0.95em;
 
+    box-shadow: inset 0 0 10px rgba(90, 77, 60, 0.1);
+}
 
 code {
-font-family: 'Courier New', monospace;
-}
+    font-family: 'Courier New', monospace;
 
+    color: #5a4d3c;}
 
 /* ===== Footer ===== */
 footer {
-text-align: center;
-padding: 15px 0;
-font-size: 0.9em;
-color: #666;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 0.9em;
+    color: #5a4d3c;
+    border-top: 1px solid #d6c6b0;
 }
 
+/* ===== Lenker i footer ===== */
+footer a {
+    color: #5a4d3c;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+footer a:hover {
+    color: #a28f7f;
+}
 
 /* ===== Responsive ===== */
+@media (max-width: 992px) {
+    nav ul {
+        gap: 15px;
+    }
+
+    section {
+        padding: 25px;
+    }
+}
+
 @media (max-width: 768px) {
-nav ul {
-flex-direction: column;
-gap: 10px;
+    nav ul {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    header h1 {
+        font-size: 2.2em;
+    }
+
+    section {
+        padding: 20px;
+    }
 }
 
+@media (max-width: 480px) {
+    header img {
+        width: 140px;
+        height: 140px;
+    }
 
-header h1 {
-font-size: 2em;
-}
+    header h1 {
+        font-size: 1.8em;
+    }
 
-
-section {
-padding: 20px;
-}
+    section {
+        padding: 15px;
+    }
 }
