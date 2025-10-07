@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LEGO-prosjekt 1</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header>
+<h1>LEGO-prosjekt 1</h1>
+</header>
+
+
+<section>
+<h2>Formål</h2>
+<p>Lære å bruke for-løkker og Pybricks for å kontrollere LEGO-roboten. Vise tekst på LCD-skjerm, kjøre et rektangel og få roboten til å si «Have a nice day».</p>
+
+
+<h2>Kode</h2>
+<pre><code>
+#!/usr/bin/env pybricks-micropython
+from pybricks.hubs import EV3Brick
+from pybricks.ev3devices import Motor
+from pybricks.parameters import Port, Stop
+from pybricks.tools import wait
+
+
+hjernen = EV3Brick()
+venstre_motor = Motor(Port.C)
+hoyre_motor = Motor(Port.B)
+
+
+hjernen.screen.print("Hello World")
+wait(2000)
+
+
+def kjør_frem_kort():
+venstre_motor.run_angle(2000, 720, Stop.BRAKE, False)
+hoyre_motor.run_angle(2000, 720, Stop.BRAKE, True)
+# Resten av koden her...
+</code></pre>
+
+
+<h2>Refleksjon</h2>
+<p>Gjennom prosjektet lærte jeg å bruke motorer og skjerm på EV3, planlegge bevegelsesmønster og teste koden på roboten. Jeg forbedret også samarbeidsevner ved å dele oppgaver i gruppen.</p>
+</section>
+
+
+<footer>
+<p><a href="index.html">Tilbake til porteføljen</a></p>
+</footer>
+</body>
+</html>

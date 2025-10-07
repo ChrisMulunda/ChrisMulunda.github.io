@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LEGO-prosjekt 3</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header>
+<h1>LEGO-prosjekt 3</h1>
+</header>
+
+
+<section>
+<h2>Formål</h2>
+<p>Bli kjent med fargesensor og ultralydsensor, og programmere roboten til å følge linjer og utføre underholdning.</p>
+
+
+<h2>Kode</h2>
+<pre><code>
+#!/usr/bin/env pybricks-micropython
+from pybricks.hubs import EV3Brick
+from pybricks.ev3devices import Motor, ColorSensor, UltrasonicSensor
+from pybricks.robotics import DriveBase
+from pybricks.tools import StopWatch, wait
+import random
+
+
+hjernen = EV3Brick()
+venstre_motor = Motor(Port.A)
+hoyre_motor = Motor(Port.D)
+robot = DriveBase(hoyre_motor, venstre_motor, wheel_diameter=56, axle_track=114)
+farge_sensor = ColorSensor(Port.S1)
+ultra = UltrasonicSensor(Port.S3)
+# Resten av koden her...
+</code></pre>
+
+
+<h2>Refleksjon</h2>
+<p>Jeg lærte å kombinere flere sensorer og kontrollere robotens oppførsel på en kompleks bane. Prosjektet styrket ferdigheter i problemløsning og eksperimentering med Python.</p>
+</section>
+
+
+<footer>
+<p><a href="index.html">Tilbake til porteføljen</a></p>
+</footer>
+</body>
+</html>

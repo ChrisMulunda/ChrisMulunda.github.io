@@ -1,0 +1,79 @@
+/* ===== Generelt ===== */
+padding: 5px 10px;
+transition: background-color 0.3s, color 0.3s;
+}
+
+
+nav ul li a:hover {
+background-color: #1a73e8;
+color: #fff;
+border-radius: 5px;
+}
+
+
+/* ===== Seksjoner ===== */
+section {
+max-width: 900px;
+margin: auto;
+background-color: #fff;
+padding: 25px;
+border-radius: 10px;
+box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+margin-bottom: 40px;
+}
+
+
+section h2 {
+color: #1a1a1a;
+margin-bottom: 15px;
+}
+
+
+section p {
+margin-bottom: 15px;
+font-size: 1.05em;
+}
+
+
+/* ===== Kodeblokker ===== */
+pre {
+background-color: #272822;
+color: #f8f8f2;
+padding: 15px;
+overflow-x: auto;
+border-radius: 8px;
+margin-bottom: 20px;
+}
+
+
+code {
+font-family: 'Courier New', monospace;
+}
+
+
+/* ===== Footer ===== */
+footer {
+text-align: center;
+padding: 15px 0;
+font-size: 0.9em;
+color: #666;
+}
+
+
+/* ===== Responsive ===== */
+@media (max-width: 768px) {
+nav ul {
+flex-direction: column;
+gap: 10px;
+}
+
+
+header h1 {
+font-size: 2em;
+}
+
+
+section {
+padding: 20px;
+}
+}
