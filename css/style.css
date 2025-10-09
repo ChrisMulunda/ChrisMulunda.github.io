@@ -140,6 +140,44 @@ footer a:hover {
     color: #a28f7f;
 }
 
+/* EV3Tasks project grid */
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+    max-width: 1100px;
+    margin: 20px auto 40px auto;
+}
+
+.project-card {
+    background: linear-gradient(180deg, #fff 0%, #fbf7f2 100%);
+    border-radius: 12px;
+    padding: 18px;
+    box-shadow: 0 6px 18px rgba(90,77,60,0.08);
+    transition: transform 0.18s ease, box-shadow 0.18s ease;
+}
+.project-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 30px rgba(90,77,60,0.12);
+}
+.project-card h3 {
+    color: #5a4d3c;
+    margin-bottom: 8px;
+}
+.project-card p { color: #5a4d3c; }
+
+.btn {
+    display: inline-block;
+    background: #5a4d3c;
+    color: #fff;
+    padding: 8px 12px;
+    border-radius: 8px;
+    text-decoration: none;
+}
+.btn:hover { background: #463a2f; }
+
+.lead { color: #5a4d3c; font-size: 1.05em; margin-bottom: 12px; }
+
 /* ===== Responsive ===== */
 @media (max-width: 992px) {
     nav ul {
