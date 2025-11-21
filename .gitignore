@@ -1,0 +1,4 @@
+# ignore nested git dirs and Office temp files
+*/.git
+ChrisMulunda.github.io.git/
+~$*
