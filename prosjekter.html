@@ -1,151 +1,137 @@
 <!DOCTYPE html>
 <html lang="no">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Prosjekter – Chris Mulunda Mpinda</title>
-<link rel="stylesheet" href="css/style.css">
-<style>
-body { font-family: Arial, sans-serif; background:#f7f7f7; margin:0; }
-header { text-align:center; padding:2rem; background:white; border-bottom:1px solid #ddd; }
-nav ul { display:flex; justify-content:center; list-style:none; gap:2rem; padding:0; background:#222; margin:0; }
-nav a { color:white; text-decoration:none; font-weight:bold; padding:0.5rem 1rem; display:block; }
-nav a:hover { text-decoration:underline; }
-main { max-width:1000px; margin:0 auto; padding:2rem 1rem; }
-.tabs { display:flex; gap:1rem; margin-bottom:1rem; cursor:pointer; }
-.tab { padding:0.7rem 1.2rem; background:#ddd; border-radius:5px; }
-.tab.active { background:#222; color:white; }
-.tab-content { display:none; background:white; padding:1.5rem; border-radius:10px; box-shadow:0 1px 4px rgba(0,0,0,0.1); }
-.tab-content.active { display:block; }
-.section-box { margin-bottom:1.5rem; }
-iframe { border:1px solid #ddd; border-radius:5px; }
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prosjekter – Chris Mulunda Mpinda</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        body { font-family: Arial, sans-serif; background:#f7f7f7; margin:0; }
+        header { text-align:center; padding:2rem; background:white; border-bottom:1px solid #ddd; }
+        nav ul { display:flex; justify-content:center; list-style:none; gap:2rem; padding:0; background:#222; margin:0; }
+        nav a { color:white; text-decoration:none; font-weight:bold; padding:0.5rem 1rem; display:block; }
+        nav a:hover { text-decoration:underline; }
+        main { max-width:1000px; margin:0 auto; padding:2rem 1rem; }
+        .tabs { display:flex; gap:1rem; margin-bottom:1rem; cursor:pointer; }
+        .tab { padding:0.7rem 1.2rem; background:#ddd; border-radius:5px; }
+        .tab.active { background:#222; color:white; }
+        .tab-content { display:none; background:white; padding:1.5rem; border-radius:10px; box-shadow:0 1px 4px rgba(0,0,0,0.1); }
+        .tab-content.active { display:block; }
+        .section-box { margin-bottom:1.5rem; }
+        iframe { border:1px solid #ddd; border-radius:5px; }
+    </style>
 </head>
 <body>
 
-<header>
-  <h1>Prosjekter</h1>
-  <p>Oversikt over LEGO, LEXO arm og dataarkitektur-prosjekter</p>
-</header>
+    <header>
+        <h1>Prosjekter</h1>
+        <p>Oversikt over LEGO, LEXO arm og dataarkitektur-prosjekter</p>
+    </header>
 
-<nav>
-  <ul>
-    <li><a href="index.html">Hjem</a></li>
-    <li><a href="programmering.html">Programmeringsøvinger</a></li>
-    <li><a href="annet.html">Annet</a></li>
-  </ul>
-</nav>
+    <nav>
+        <ul>
+            <li><a href="index.html">Hjem</a></li>
+            <li><a href="programmering.html">Programmeringsøvinger</a></li>
+            <li><a href="annet.html">Annet</a></li>
+        </ul>
+    </nav>
 
-<main>
-  <div class="tabs">
-    <div class="tab active" data-tab="lego">LEGO</div>
-    <div class="tab" data-tab="lexo">LEXO arm</div>
-    <div class="tab" data-tab="data">Dataarkitektur</div>
-  </div>
+    <main>
+        <div class="tabs">
+            <div class="tab active" data-tab="lego">LEGO</div>
+            <div class="tab" data-tab="lexo">LEXO arm</div>
+            <div class="tab" data-tab="data">Dataarkitektur</div>
+        </div>
 
-  <!-- LEGO Tab -->
-  <div id="lego" class="tab-content active">
-    <h2>LEGO Prosjekter</h2>
+        <div id="lego" class="tab-content active">
+            <h2>LEGO Prosjekter</h2>
+            <section class="section-box">
+                <h2>Kode (LEGO / EV3)</h2>
+                <p>Koden for hvert prosjekt er listet under.</p>
 
-    <section class="section-box">
-      <h2>Kode (LEGO / EV3)</h2>
-      <p>Koden for hvert prosjekt er listet under.</p>
+                <article class="section-box">
+                    <h3>Oppgave 1</h3>
+                    <p><a href="EV3Tasks/code/oppgave1.py" target="_blank" rel="noopener">Åpne kode</a></p>
+                </article>
 
-      <article class="section-box">
-        <h3>Oppgave 1</h3>
-        <p>
-          <a href="EV3Tasks/code/oppgave1.py" target="_blank" rel="noopener">Åpne kode</a></p>
-      </article>
+                <article class="section-box">
+                    <h3>Oppgave 2</h3>
+                    <p><a href="EV3Tasks/code/oppgave2.py" target="_blank" rel="noopener">Åpne kode</a></p>
+                </article>
 
-      <article class="section-box">
-        <h3>Oppgave 2</h3>
-        <p>
-          <a href="EV3Tasks/code/oppgave2.py" target="_blank" rel="noopener">Åpne kode</a></p>
-      </article>
+                <article class="section-box">
+                    <h3>Oppgave 3</h3>
+                    <p><a href="EV3Tasks/code/oppgave3.py" target="_blank" rel="noopener">Åpne kode</a></p>
+                </article>
 
-      <article class="section-box">
-        <h3>Oppgave 3</h3>
-        <p>
-          <a href="EV3Tasks/code/oppgave3.py" target="_blank" rel="noopener">Åpne kode</a></p>
-      </article>
+                <article class="section-box">
+                    <h3>Oppgave 4</h3>
+                    <p><a href="EV3Tasks/code/oppgave4.py" target="_blank" rel="noopener">Åpne kode</a></p>
+                </article>
+            </section>
+        </div>
 
-      <article class="section-box">
-        <h3>Oppgave 4</h3>
-        <p>
-          <a href="EV3Tasks/code/oppgave4.py" target="_blank" rel="noopener">Åpne kode</a></p>
-      </article>
-    </section>
+        <div id="lexo" class="tab-content">
+            <h2>LEXO Arm</h2>
+            <section class="section-box">
+                <h3>Kode</h3>
+                <p><a href="Lexoarm/main.py" target="_blank" rel="noopener">Åpne main.py</a></p>
+                <iframe src="Lexoarm/main.py" style="width:100%;height:320px;" title="LEXO-Arm - kode forhåndsvisning"></iframe>
+            </section>
+            <section class="section-box">
+                <h3>Rapport</h3>
+                <p><a href="lexo/rapport.pdf" target="_blank">Åpne PDF-rapport</a></p>
+            </section>
+            <section class="section-box">
+                <h3>Presentasjon</h3>
+                <p><a href="lexo/presentasjon.pdf" target="_blank">Åpne PDF-presentasjon</a></p>
+            </section>
+            <section class="section-box">
+                <h3>Refleksjon</h3>
+                <p><a href="lexo/refleksjon.docx" target="_blank">Åpne refleksjon</a></p>
+            </section>
+        </div>
 
-  </div>
+        <div id="data" class="tab-content">
+            <h2>Dataarkitektur</h2>
+            <section class="section-box">
+                <h3>Rapport</h3>
+                <p><a href="data/rapport.docx" target="_blank">Åpne Word-rapport</a></p>
+            </section>
+            <section class="section-box">
+                <h3>PowerPoint</h3>
+                <p><a href="data/presentasjon.pptx" target="_blank">Åpne PowerPoint</a></p>
+            </section>
+        </div>
+    </main>
 
-  <!-- LEXO Arm Tab -->
-  <div id="lexo" class="tab-content">
-    <h2>LEXO Arm</h2>
-    <section class="section-box">
-      <h3>Kode</h3>
-      <p>
-        <a href="Lexoarm/main.py" target="_blank" rel="noopener">Åpne main.py</a></p>
-      <iframe src="Lexoarm/main.py" style="width:100%;height:320px;" title="LEXO-Arm - kode forhåndsvisning"></iframe>
-    </section>
-    <section class="section-box">
-      <h3>Rapport</h3>
-      <p><a href="lexo/rapport.pdf" target="_blank">Åpne PDF-rapport</a></p>
-    </section>
-    <section class="section-box">
-      <h3>Presentasjon</h3>
-      <p><a href="lexo/presentasjon.pdf" target="_blank">Åpne PDF-presentasjon</a></p>
-    </section>
-    <section class="section-box">
-      <h3>Refleksjon</h3>
-      <p><a href="lexo/refleksjon.docx" target="_blank">Åpne refleksjon</a></p>
-    </section>
-  </div>
+    <footer>
+        <p>© 2025 Chris Mulunda Mpinda</p>
+    </footer>
 
-  <!-- Dataarkitektur Tab -->
-  <div id="data" class="tab-content">
-    <h2>Dataarkitektur</h2>
-    <section class="section-box">
-      <h3>Rapport</h3>
-      <p><a href="data/rapport.docx" target="_blank">Åpne Word-rapport</a></p>
-    </section>
-    <section class="section-box">
-      <h3>PowerPoint</h3>
-      <p><a href="data/presentasjon.pptx" target="_blank">Åpne PowerPoint</a></p>
-    </section>
-  </div>
+    <script>
+        const tabs = document.querySelectorAll('.tab');
+        const contents = document.querySelectorAll('.tab-content');
 
-</main>
-
-<footer>
-  <p>© 2025 Chris Mulunda Mpinda</p>
-</footer>
-
-<script>
-const tabs = document.querySelectorAll('.tab');
-const contents = document.querySelectorAll('.tab-content');
-
-tabs.forEach(tab => {
-  tab.addEventListener('click', () => {
-    tabs.forEach(t => t.classList.remove('active'));
-    contents.forEach(c => c.classList.remove('active'));
-    tab.classList.add('active');
-    document.getElementById(tab.dataset.tab).classList.add('active');
-  });
-});
-</script>
+        tabs.forEach(tab => {
+            tab.addEventListener('click', () => {
+                // Fjerner 'active' fra alle faner og innhold
+                tabs.forEach(t => t.classList.remove('active'));
+                contents.forEach(c => c.classList.remove('active'));
+                
+                // Legger til 'active' på den klikkede fanen og tilhørende innhold
+                tab.classList.add('active');
+                document.getElementById(tab.dataset.tab).classList.add('active');
+            });
+        });
+    </script>
 
 </body>
 </html>
-<!DOCTYPE html>
-<html lang="no"></html>
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Programmeringsøvinger – Chris Mulunda Mpinda</title>
-  <style>
+    <style>
     body {
       font-family: Arial, sans-serif;
-      background: #f7f7f7;
+      background: #f4f4f4;
       margin: 0;
     }
 
@@ -156,39 +142,13 @@ tabs.forEach(tab => {
       border-bottom: 1px solid #ddd;
     }
 
+    nav {
+      background: #222;
+      padding: 0.8rem 0;
+    }
+
     nav ul {
       list-style: none;
       margin: 0;
-        padding: 0;
-        display: flex;
-        justify-content: center;
-        gap: 2rem;
-    }
-
-
-    nav a {
-      color: white;
-      text-decoration: none;
-      font-weight: bold;
-      padding: 0.5rem 1rem;
-      display: block;
-    }                   
-
-    nav a:hover {
-      text-decoration: underline;
-    }               
-
-    main {
-      max-width: 900px;
-      margin: 0 auto;
-      padding: 2rem 1rem;
-    }           
-
-    .section-box {
-      background: white;
-      padding: 1.5rem;
-      border-radius: 10px;
-      margin-bottom: 2rem;
-      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
-    }
+      padding: 0; 
 
