@@ -18,7 +18,10 @@
         .tab-content { display:none; background:white; padding:1.5rem; border-radius:10px; box-shadow:0 1px 4px rgba(0,0,0,0.1); }
         .tab-content.active { display:block; }
         .section-box { margin-bottom:1.5rem; }
-        iframe { border:1px solid #ddd; border-radius:5px; }
+        
+        /* Stil for kodevisning */
+        pre { background: #f4f4f4; padding: 1rem; border-radius: 5px; overflow-x: auto; border: 1px solid #ddd; }
+        code { font-family: Consolas, monospace; color: #333; }
     </style>
 </head>
 <body>
@@ -31,6 +34,7 @@
     <nav>
         <ul>
             <li><a href="index.html">Hjem</a></li>
+            <li><a href="prosjekter.html">Prosjekter</a></li>
             <li><a href="programmering.html">Programmeringsøvinger</a></li>
             <li><a href="annet.html">Annet</a></li>
         </ul>
@@ -43,64 +47,91 @@
             <div class="tab" data-tab="data">Dataarkitektur</div>
         </div>
 
+        <!-- LEGO TAB -->
         <div id="lego" class="tab-content active">
             <h2>LEGO Prosjekter</h2>
             <section class="section-box">
                 <h2>Kode (LEGO / EV3)</h2>
-                <p>Koden for hvert prosjekt er listet under.</p>
+                <p>Her vises koden direkte i nettleseren.</p>
 
                 <article class="section-box">
                     <h3>Oppgave 1</h3>
-                    <p><a href="EV3Tasks/code/oppgave1.py" target="_blank" rel="noopener">Åpne kode</a></p>
+                    <p><a href="EV3Tasks/code/oppgave1.py" download>Last ned filen</a></p>
+                    <pre><code>
+#!/usr/bin/env pybricks-micropython
+from pybricks.hubs import EV3Brick
+from pybricks.ev3devices import Motor
+from pybricks.parameters import Port, Stop
+# ... (Kode for oppgave 1)
+                    </code></pre>
                 </article>
 
                 <article class="section-box">
                     <h3>Oppgave 2</h3>
-                    <p><a href="EV3Tasks/code/oppgave2.py" target="_blank" rel="noopener">Åpne kode</a></p>
+                    <p><a href="EV3Tasks/code/oppgave2.py" download>Last ned filen</a></p>
+                    <pre><code>
+# ... (Kode for oppgave 2)
+                    </code></pre>
                 </article>
 
                 <article class="section-box">
                     <h3>Oppgave 3</h3>
-                    <p><a href="EV3Tasks/code/oppgave3.py" target="_blank" rel="noopener">Åpne kode</a></p>
+                    <p><a href="EV3Tasks/code/oppgave3.py" download>Last ned filen</a></p>
+                    <pre><code>
+# ... (Kode for oppgave 3)
+                    </code></pre>
                 </article>
 
                 <article class="section-box">
                     <h3>Oppgave 4</h3>
-                    <p><a href="EV3Tasks/code/oppgave4.py" target="_blank" rel="noopener">Åpne kode</a></p>
+                    <p><a href="EV3Tasks/code/oppgave4.py" download>Last ned filen</a></p>
+                    <pre><code>
+# ... (Kode for oppgave 4)
+                    </code></pre>
                 </article>
             </section>
         </div>
 
+        <!-- LEXO ARM TAB -->
         <div id="lexo" class="tab-content">
             <h2>LEXO Arm</h2>
             <section class="section-box">
                 <h3>Kode</h3>
-                <p><a href="Lexoarm/main.py" target="_blank" rel="noopener">Åpne main.py</a></p>
-                <iframe src="Lexoarm/main.py" style="width:100%;height:320px;" title="LEXO-Arm - kode forhåndsvisning"></iframe>
+                <p><a href="EV3Tasks/LEXO-Arm/main.py" download>Last ned main.py</a></p>
+                <pre><code>
+# ... (Kode for Lexo Arm main.py)
+                </code></pre>
             </section>
             <section class="section-box">
                 <h3>Rapport</h3>
-                <p><a href="lexo/rapport.pdf" target="_blank">Åpne PDF-rapport</a></p>
+                <!-- PDF kan åpnes i ny fane -->
+                <p><a href="EV3Tasks/Teambasert_endeligVurdering.pdf" target="_blank">Åpne Rapport (PDF)</a></p>
             </section>
             <section class="section-box">
                 <h3>Presentasjon</h3>
-                <p><a href="lexo/presentasjon.pdf" target="_blank">Åpne PDF-presentasjon</a></p>
+                <!-- PDF kan åpnes i ny fane -->
+                <p><a href="EV3Tasks/LEXO-Arm/LEXOARM-Presentasjon.pdf" target="_blank">Åpne Presentasjon (PDF)</a></p>
             </section>
             <section class="section-box">
                 <h3>Refleksjon</h3>
-                <p><a href="lexo/refleksjon.docx" target="_blank">Åpne refleksjon</a></p>
+                <!-- Word-filer MÅ lastes ned -->
+                <p>Word-filer kan ikke vises i nettleseren.</p>
+                <p><a href="EV3Tasks/LEXO-Arm/refleksjon.docx" download>Last ned Refleksjon (Word)</a></p>
             </section>
         </div>
 
+        <!-- DATAARKITEKTUR TAB -->
         <div id="data" class="tab-content">
             <h2>Dataarkitektur</h2>
             <section class="section-box">
                 <h3>Rapport</h3>
-                <p><a href="data/rapport.docx" target="_blank">Åpne Word-rapport</a></p>
+                <p><a href="Dataarkitektur/rapport ssd (1).pdf" target="_blank">Åpne Rapport (PDF)</a></p>
             </section>
             <section class="section-box">
                 <h3>PowerPoint</h3>
-                <p><a href="data/presentasjon.pptx" target="_blank">Åpne PowerPoint</a></p>
+                <!-- PPTX MÅ lastes ned -->
+                <p>PowerPoint-filer kan ikke vises i nettleseren.</p>
+                <p><a href="Dataarkitektur/datamaskinArkitektur oppg.pptx" download>Last ned Presentasjon (PPTX)</a></p>
             </section>
         </div>
     </main>
@@ -115,11 +146,9 @@
 
         tabs.forEach(tab => {
             tab.addEventListener('click', () => {
-                // Fjerner 'active' fra alle faner og innhold
                 tabs.forEach(t => t.classList.remove('active'));
                 contents.forEach(c => c.classList.remove('active'));
                 
-                // Legger til 'active' på den klikkede fanen og tilhørende innhold
                 tab.classList.add('active');
                 document.getElementById(tab.dataset.tab).classList.add('active');
             });
@@ -128,27 +157,3 @@
 
 </body>
 </html>
-    <style>
-    body {
-      font-family: Arial, sans-serif;
-      background: #f4f4f4;
-      margin: 0;
-    }
-
-    header {
-      text-align: center;
-      padding: 2rem;
-      background: white;
-      border-bottom: 1px solid #ddd;
-    }
-
-    nav {
-      background: #222;
-      padding: 0.8rem 0;
-    }
-
-    nav ul {
-      list-style: none;
-      margin: 0;
-      padding: 0; 
-
