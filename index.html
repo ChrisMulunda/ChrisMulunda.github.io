@@ -5,29 +5,72 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Chris Mulunda Mpinda – E‑portefølje</title>
   <link rel="stylesheet" href="css/style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
   <style>
+    :root {
+      --primary-color: #0056b3;
+      --secondary-color: #222;
+      --bg-color: #f4f7f6;
+      --text-color: #333;
+      --card-bg: #ffffff;
+      --shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    }
+
     body {
       margin: 0;
-      font-family: Arial, sans-serif;
-      background: #f7f7f7;
-      color: #222;
+      font-family: 'Inter', sans-serif;
+      background: var(--bg-color);
+      color: var(--text-color);
+      line-height: 1.6;
     }
 
     header {
       text-align: center;
-      padding: 2rem 1rem;
-      background: #ffffff;
-      border-bottom: 1px solid #ddd;
+      padding: 4rem 1rem;
+      background: linear-gradient(135deg, #0056b3, #004494);
+      color: white;
+      clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
     }
 
     header img {
-      border-radius: 8px;
+      border-radius: 50%;
+      border: 4px solid white;
       margin-top: 1rem;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      width: 160px;
+      height: 160px;
+      object-fit: cover;
+    }
+
+    header h1 {
+      margin: 1rem 0 0.5rem;
+      font-size: 2.5rem;
+      font-weight: 700;
+    }
+
+    header p {
+      margin: 0.2rem 0;
+      font-size: 1.1rem;
+      opacity: 0.9;
+    }
+
+    header a {
+      color: #ffcc00;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    header a:hover {
+      text-decoration: underline;
     }
 
     nav {
-      background: #222;
-      padding: 0.8rem 0;
+      background: var(--card-bg);
+      padding: 1rem 0;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+      position: sticky;
+      top: 0;
+      z-index: 100;
     }
 
     nav ul {
@@ -36,49 +79,78 @@
       padding: 0;
       display: flex;
       justify-content: center;
-      gap: 2rem;
+      gap: 2.5rem;
     }
 
     nav a {
-      color: white;
+      color: var(--secondary-color);
       text-decoration: none;
-      font-weight: bold;
+      font-weight: 600;
+      font-size: 1.1rem;
+      transition: color 0.3s;
     }
 
     nav a:hover {
-      text-decoration: underline;
+      color: var(--primary-color);
     }
 
     main {
       max-width: 900px;
-      margin: 0 auto;
-      padding: 2rem 1rem;
+      margin: 3rem auto;
+      padding: 0 1.5rem;
     }
 
     section {
-      margin-bottom: 2.5rem;
-      background: white;
-      padding: 1.5rem;
-      border-radius: 10px;
-      box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+      margin-bottom: 3rem;
+      background: var(--card-bg);
+      padding: 2.5rem;
+      border-radius: 12px;
+      box-shadow: var(--shadow);
+      transition: transform 0.2s ease;
+    }
+
+    section:hover {
+      transform: translateY(-3px);
+    }
+
+    h2 {
+      color: var(--primary-color);
+      border-bottom: 2px solid #eee;
+      padding-bottom: 0.5rem;
+      margin-top: 0;
+    }
+
+    ul {
+      padding-left: 1.5rem;
+    }
+
+    li {
+      margin-bottom: 0.5rem;
     }
 
     footer {
       text-align: center;
-      padding: 2rem 1rem;
-      color: #555;
+      padding: 3rem 1rem;
+      background: var(--secondary-color);
+      color: #aaa;
+      margin-top: 4rem;
+    }
+    
+    @media (max-width: 600px) {
+      header h1 { font-size: 2rem; }
+      nav ul { gap: 1.5rem; font-size: 0.9rem; }
+      section { padding: 1.5rem; }
     }
   </style>
 </head>
 <body>
 
 <header>
+  <img src="images/profil-rgb.jpg" alt="Profilbilde Chris Mulunda">
   <h1>Chris Mulunda Mpinda</h1>
-  <img src="images/profil-rgb.jpg" alt="Profilbilde Chris Mulunda" width="160">
   <p>Dataingeniørstudent ved NTNU</p>
-  <p>E‑post: Chrismpinda2005@gmail.com</p>
-  <p>github: <a href="https://github.com/ChrisMulunda" target="_blank" rel="noopener noreferrer">ChrisMulunda</a></p>
-  <p>Telefon: +47 40159887</p>
+  <p>📧 Chrismpinda2005@gmail.com | 📞 +47 40159887</p>
+  <p>GitHub: <a href="https://github.com/ChrisMulunda" target="_blank" rel="noopener noreferrer">ChrisMulunda</a></p>
 </header>
 
 <nav>
@@ -93,7 +165,10 @@
 
   <section id="ommeg">
     <h2>Om meg</h2>
-    <p>Hei! Jeg heter Chris Mulunda Mpinda, og jeg studerer til å bli dataingeniør ved NTNU. Jeg er spesielt interessert i systemutvikling, robotikk og programmering. Jeg liker å lære nye ting og ta på meg tekniske utfordringer. Gjennom studiene forventer jeg å få erfaring med ulike programmeringsspråk og teknologier, og jeg er alltid motivert for å utvikle meg og utforske nye områder. Selv om jeg ikke har så mye erfaring innen BIDATA ennå, har jeg tatt relevante fag på videregående, blant annet R1, R2 og Fysikk 1. Jeg er nysgjerrig av natur, og trives både med selvstendig arbeid og samarbeid i grupper. Jeg har ingen sterke preferanser når det gjelder roller i gruppearbeid. Jeg er fleksibel, tilgjengelig og mener at alle roller er viktige for å få et godt resultat. Jeg liker matematikk, idrett og å være sosial. Dataingeniørstudiet opplever jeg som både en spennende utfordring og en verdifull mulighet til å lære mye nytt. Jeg jobber strukturert, løsningsorientert og har erfaring med både samarbeid og problemløsning fra ulike prosjektoppgaver.</p>
+    <p>Hei! Jeg heter Chris Mulunda Mpinda, og jeg studerer til å bli dataingeniør ved NTNU. Jeg er spesielt interessert i systemutvikling, robotikk og programmering. Jeg liker å lære nye ting og ta på meg tekniske utfordringer.</p>
+    <p>Gjennom studiene forventer jeg å få erfaring med ulike programmeringsspråk og teknologier, og jeg er alltid motivert for å utvikle meg og utforske nye områder. Selv om jeg ikke har så mye erfaring innen BIDATA ennå, har jeg tatt relevante fag på videregående, blant annet R1, R2 og Fysikk 1.</p>
+    <p>Jeg er nysgjerrig av natur, og trives både med selvstendig arbeid og samarbeid i grupper. Jeg har ingen sterke preferanser når det gjelder roller i gruppearbeid. Jeg er fleksibel, tilgjengelig og mener at alle roller er viktige for å få et godt resultat.</p>
+    <p>Jeg liker matematikk, idrett og å være sosial. Dataingeniørstudiet opplever jeg som både en spennende utfordring og en verdifull mulighet til å lære mye nytt. Jeg jobber strukturert, løsningsorientert og har erfaring med både samarbeid og problemløsning fra ulike prosjektoppgaver.</p>
   </section>
 
   <section>
