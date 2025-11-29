@@ -14,8 +14,10 @@
             --text-color: #333;
             --card-bg: #ffffff;
             --shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            /* Mørkt tema for kode */
             --code-bg: #2d2d2d;
             --code-text: #f8f8f2;
+            --code-border: #444;
         }
 
         body {
@@ -181,7 +183,7 @@
             overflow-x: auto;
             font-family: 'Consolas', 'Monaco', monospace;
             font-size: 0.9rem;
-            border: 1px solid #444;
+            border: 1px solid var(--code-border);
             box-shadow: inset 0 2px 4px rgba(0,0,0,0.3);
         }
 
@@ -387,6 +389,12 @@ while True:
                     </code></pre>
                 </div>
                 <div id="oppgave2-refleksjon" class="sub-tab-content">
+                    <h4>Oppgavebeskrivelse</h4>
+                    <p>Bernt - gressklipperoboten på NTNU​ – har ferie og trenger derfor en vikar til å klippe plenen. Dere skal derfor lage en gressklipper-robot som kan steppe inn for Bernt. Roboten deres trenger ikke klippe noe som helst, dere trenger kun å sørge for at den kjører rundt på plenen på en fornuftig måte.</p>
+                    <p>Programmet til roboten skal kunne startes og stoppes med én trykksensor. I tillegg skal dere bruke enten en trykksensor eller en ultralydsensor for å unngå trærne som står på plenen.</p>
+                    <p>Når man trykker på av/på-knappen skal roboten si «Exercise 2» og deretter begynne og kjøre. Dersom roboten møter på en hindring skal den svinge litt, og deretter fortsette å kjøre rundt. Når av/på-knappen trykkes på igjen skal roboten stoppe, si «Exercise done», og programmet skal avsluttes.</p>
+                    
+                    <h4>Refleksjon</h4>
                     <p>Her kan du skrive din refleksjon for Oppgave 2.</p>
                 </div>
             </article>
