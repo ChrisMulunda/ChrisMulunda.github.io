@@ -5,30 +5,202 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Prosjekter – Chris Mulunda Mpinda</title>
     <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
     <style>
-        body { font-family: Arial, sans-serif; background:#f7f7f7; margin:0; }
-        header { text-align:center; padding:2rem; background:white; border-bottom:1px solid #ddd; }
-        nav ul { display:flex; justify-content:center; list-style:none; gap:2rem; padding:0; background:#222; margin:0; }
-        nav a { color:white; text-decoration:none; font-weight:bold; padding:0.5rem 1rem; display:block; }
-        nav a:hover { text-decoration:underline; }
-        main { max-width:1000px; margin:0 auto; padding:2rem 1rem; }
-        .tabs { display:flex; gap:1rem; margin-bottom:1rem; cursor:pointer; }
-        .tab { padding:0.7rem 1.2rem; background:#ddd; border-radius:5px; }
-        .tab.active { background:#222; color:white; }
-        .tab-content { display:none; background:white; padding:1.5rem; border-radius:10px; box-shadow:0 1px 4px rgba(0,0,0,0.1); }
-        .tab-content.active { display:block; }
-        .section-box { margin-bottom:1.5rem; }
+        :root {
+            --primary-color: #0056b3;
+            --secondary-color: #222;
+            --bg-color: #f4f7f6;
+            --text-color: #333;
+            --card-bg: #ffffff;
+            --shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            --code-bg: #2d2d2d;
+            --code-text: #f8f8f2;
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Inter', sans-serif;
+            background: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+
+        header {
+            text-align: center;
+            padding: 3rem 1rem;
+            background: linear-gradient(135deg, #0056b3, #004494);
+            color: white;
+            clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+            margin-bottom: 2rem;
+        }
+
+        header h1 { margin: 0; font-size: 2.5rem; font-weight: 700; }
+        header p { margin-top: 0.5rem; opacity: 0.9; font-size: 1.1rem; }
+
+        nav {
+            background: var(--card-bg);
+            padding: 1rem 0;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+        }
+
+        nav a {
+            color: var(--secondary-color);
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s;
+        }
+
+        nav a:hover { color: var(--primary-color); }
+
+        main {
+            max-width: 1000px;
+            margin: 2rem auto;
+            padding: 0 1.5rem;
+        }
+
+        /* Main Tabs Styling */
+        .tabs {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 2rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .tab {
+            padding: 0.8rem 1.5rem;
+            background: #e0e0e0;
+            border-radius: 30px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+        }
+
+        .tab:hover { background: #d4d4d4; }
+
+        .tab.active {
+            background: var(--primary-color);
+            color: white;
+            box-shadow: 0 4px 10px rgba(0, 86, 179, 0.3);
+        }
+
+        .tab-content {
+            display: none;
+            animation: fadeIn 0.4s ease;
+        }
+
+        .tab-content.active { display: block; }
+
+        /* Sub-tabs Styling (for Code/Reflection) */
+        .sub-tabs {
+            display: flex;
+            gap: 0.5rem;
+            margin-bottom: 1rem;
+            border-bottom: 2px solid #eee;
+        }
+
+        .sub-tab {
+            padding: 0.5rem 1rem;
+            cursor: pointer;
+            font-weight: 600;
+            color: #666;
+            border-bottom: 2px solid transparent;
+            margin-bottom: -2px;
+            transition: all 0.3s ease;
+        }
+
+        .sub-tab:hover { color: var(--primary-color); }
+
+        .sub-tab.active {
+            color: var(--primary-color);
+            border-bottom: 2px solid var(--primary-color);
+        }
+
+        .sub-tab-content {
+            display: none;
+        }
+
+        .sub-tab-content.active { display: block; }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Card / Article Styling */
+        article.section-box, section.section-box {
+            background: var(--card-bg);
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: var(--shadow);
+            margin-bottom: 2rem;
+            border: 1px solid #eee;
+        }
+
+        h2 { color: var(--primary-color); border-bottom: 2px solid #eee; padding-bottom: 0.5rem; }
+        h3 { margin-top: 0; color: #444; }
+
+        /* Button Styling */
+        .btn-download {
+            display: inline-block;
+            background-color: #28a745;
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            transition: background 0.3s;
+        }
+        .btn-download:hover { background-color: #218838; }
         
-        /* Stil for kodevisning */
-        pre { background: #f4f4f4; padding: 1rem; border-radius: 5px; overflow-x: auto; border: 1px solid #ddd; }
-        code { font-family: Consolas, monospace; color: #333; }
+        .btn-link { background-color: var(--primary-color); }
+        .btn-link:hover { background-color: #004494; }
+
+        /* Code Block Styling (Dark Mode) */
+        pre {
+            background: var(--code-bg);
+            color: var(--code-text);
+            padding: 1.5rem;
+            border-radius: 8px;
+            overflow-x: auto;
+            font-family: 'Consolas', 'Monaco', monospace;
+            font-size: 0.9rem;
+            border: 1px solid #444;
+            box-shadow: inset 0 2px 4px rgba(0,0,0,0.3);
+        }
+
+        code { font-family: inherit; }
+
+        footer {
+            text-align: center;
+            padding: 3rem 1rem;
+            background: var(--secondary-color);
+            color: #aaa;
+            margin-top: 4rem;
+        }
     </style>
 </head>
 <body>
 
     <header>
         <h1>Prosjekter</h1>
-        <p>Oversikt over LEGO, LEXO arm og dataarkitektur-prosjekter</p>
+        <p>Oversikt over LEGO, LEXO arm og dataarkitektur</p>
     </header>
 
     <nav>
@@ -42,23 +214,28 @@
 
     <main>
         <div class="tabs">
-            <div class="tab active" data-tab="lego">LEGO</div>
-            <div class="tab" data-tab="lexo">LEXO arm</div>
+            <div class="tab active" data-tab="lego">LEGO EV3</div>
+            <div class="tab" data-tab="lexo">LEXO Arm</div>
             <div class="tab" data-tab="data">Dataarkitektur</div>
         </div>
 
         <!-- LEGO TAB -->
         <div id="lego" class="tab-content active">
             <h2>LEGO Prosjekter</h2>
-            <section class="section-box">
-                <h2>Kode (LEGO / EV3)</h2>
-                <p>Her vises koden direkte i nettleseren.</p>
+            <p>Her finner du kildekoden og refleksjoner til de ulike LEGO EV3-oppgavene.</p>
 
-                <article class="section-box">
-                    <h3>Oppgave 1</h3>
-                    <p><a href="EV3Tasks/code/oppgave1.py" download>Last ned filen</a></p>
+            <!-- Oppgave 1 -->
+            <article class="section-box" id="oppgave1-container">
+                <h3>Oppgave 1</h3>
+                <div class="sub-tabs">
+                    <div class="sub-tab active" onclick="openSubTab(event, 'oppgave1-kode')">Kode</div>
+                    <div class="sub-tab" onclick="openSubTab(event, 'oppgave1-refleksjon')">Refleksjon</div>
+                </div>
+
+                <div id="oppgave1-kode" class="sub-tab-content active">
+                    <a href="EV3Tasks/code/oppgave1.py" download class="btn-download">📥 Last ned filen</a>
                     <pre><code>
-                      #!/usr/bin/env pybricks-micropython
+#!/usr/bin/env pybricks-micropython
 from pybricks.hubs import EV3Brick
 from pybricks.ev3devices import (Motor, TouchSensor, ColorSensor,
                                  InfraredSensor, UltrasonicSensor, GyroSensor)
@@ -125,15 +302,26 @@ hoyre_motor.stop()
 # Si "Exercise done" og avslutt
 ev3.speaker.say("Exercise done")
 ev3.screen.print("Exercise done")
-
                     </code></pre>
-                </article>
+                </div>
+                <div id="oppgave1-refleksjon" class="sub-tab-content">
+                    <p>Her kan du skrive din refleksjon for Oppgave 1.</p>
+                    <p>Eksempel: I denne oppgaven lærte jeg hvordan man bruker ultralydsensoren til å unngå hindringer...</p>
+                </div>
+            </article>
 
-                <article class="section-box">
-                    <h3>Oppgave 2</h3>
-                    <p><a href="EV3Tasks/code/oppgave2.py" download>Last ned filen</a></p>
+            <!-- Oppgave 2 -->
+            <article class="section-box" id="oppgave2-container">
+                <h3>Oppgave 2</h3>
+                <div class="sub-tabs">
+                    <div class="sub-tab active" onclick="openSubTab(event, 'oppgave2-kode')">Kode</div>
+                    <div class="sub-tab" onclick="openSubTab(event, 'oppgave2-refleksjon')">Refleksjon</div>
+                </div>
+
+                <div id="oppgave2-kode" class="sub-tab-content active">
+                    <a href="EV3Tasks/code/oppgave2.py" download class="btn-download">📥 Last ned filen</a>
                     <pre><code>
-                      #!/usr/bin/env pybricks-micropython
+#!/usr/bin/env pybricks-micropython
 from pybricks.hubs import EV3Brick
 from pybricks.ev3devices import (Motor, TouchSensor, ColorSensor,
                                  InfraredSensor, UltrasonicSensor, GyroSensor)
@@ -197,13 +385,24 @@ while True:
     
     wait(50)
                     </code></pre>
-                </article>
+                </div>
+                <div id="oppgave2-refleksjon" class="sub-tab-content">
+                    <p>Her kan du skrive din refleksjon for Oppgave 2.</p>
+                </div>
+            </article>
 
-                <article class="section-box">
-                    <h3>Oppgave 3</h3>
-                    <p><a href="EV3Tasks/code/oppgave3.py" download>Last ned filen</a></p>
+            <!-- Oppgave 3 -->
+            <article class="section-box" id="oppgave3-container">
+                <h3>Oppgave 3</h3>
+                <div class="sub-tabs">
+                    <div class="sub-tab active" onclick="openSubTab(event, 'oppgave3-kode')">Kode</div>
+                    <div class="sub-tab" onclick="openSubTab(event, 'oppgave3-refleksjon')">Refleksjon</div>
+                </div>
+
+                <div id="oppgave3-kode" class="sub-tab-content active">
+                    <a href="EV3Tasks/code/oppgave3.py" download class="btn-download">📥 Last ned filen</a>
                     <pre><code>
-                      #!/usr/bin/env pybricks-micropython
+#!/usr/bin/env pybricks-micropython
 from pybricks.hubs import EV3Brick
 from pybricks.ev3devices import (Motor, TouchSensor, ColorSensor,
                                  InfraredSensor, UltrasonicSensor, GyroSensor)
@@ -264,13 +463,24 @@ while True:
     if Button.CENTER in hjernen.buttons.pressed():
         break
                     </code></pre>
-                </article>
+                </div>
+                <div id="oppgave3-refleksjon" class="sub-tab-content">
+                    <p>Her kan du skrive din refleksjon for Oppgave 3.</p>
+                </div>
+            </article>
 
-                <article class="section-box">
-                    <h3>Oppgave 4</h3>
-                    <p><a href="EV3Tasks/code/oppgave4.py" download>Last ned filen</a></p>
+            <!-- Oppgave 4 -->
+            <article class="section-box" id="oppgave4-container">
+                <h3>Oppgave 4</h3>
+                <div class="sub-tabs">
+                    <div class="sub-tab active" onclick="openSubTab(event, 'oppgave4-kode')">Kode</div>
+                    <div class="sub-tab" onclick="openSubTab(event, 'oppgave4-refleksjon')">Refleksjon</div>
+                </div>
+
+                <div id="oppgave4-kode" class="sub-tab-content active">
+                    <a href="EV3Tasks/code/oppgave4.py" download class="btn-download">📥 Last ned filen</a>
                     <pre><code>
-                      #!/usr/bin/env pybricks-micropython
+#!/usr/bin/env pybricks-micropython
 from pybricks.hubs import EV3Brick
 from pybricks.ev3devices import (Motor, TouchSensor, ColorSensor,
                                  InfraredSensor, UltrasonicSensor, GyroSensor)
@@ -343,18 +553,22 @@ while program: #while our program is true
     wait(2000) #Waits 2 seconds before starting
     Drive()
                     </code></pre>
-                </article>
-            </section>
+                </div>
+                <div id="oppgave4-refleksjon" class="sub-tab-content">
+                    <p>Her kan du skrive din refleksjon for Oppgave 4.</p>
+                </div>
+            </article>
         </div>
 
         <!-- LEXO ARM TAB -->
         <div id="lexo" class="tab-content">
             <h2>LEXO Arm</h2>
-            <section class="section-box">
-                <h3>Kode</h3>
-                <p><a href="Lexoarm/main.py" download>Last ned main.py</a></p>
+            
+            <article class="section-box">
+                <h3>Kode (main.py)</h3>
+                <a href="Lexoarm/main.py" download class="btn-download">📥 Last ned main.py</a>
                 <pre><code>
-                  #!/usr/bin/env pybricks-micropython
+#!/usr/bin/env pybricks-micropython
 from pybricks.hubs import EV3Brick
 from pybricks.ev3devices import Motor, TouchSensor  # Legger til TouchSensor
 from pybricks.parameters import Port, Stop, Button
@@ -415,37 +629,34 @@ while True:
     # Liten pause for å unngå overbelastning av prosessoren
     wait(10)
                 </code></pre>
-            </section>
-            <section class="section-box">
-                <h3>Rapport</h3>
-                <!-- PDF kan åpnes i ny fane -->
-                <p><a href="Lexoarm/Teambasert_endeligVurdering.pdf" target="_blank">Åpne Rapport (PDF)</a></p>
-            </section>
-            <section class="section-box">
-                <h3>Presentasjon</h3>
-                <!-- PDF kan åpnes i ny fane -->
-                <p><a href="Lexoarm/LEXOARM-Presentasjon.pdf" target="_blank">Åpne Presentasjon (PDF)</a></p>
-            </section>
-            <section class="section-box">
-                <h3>Refleksjon</h3>
-                <!-- PDF kan åpnes i ny fane -->
-                <p><a href="Lexoarm/refleksjon.pdf" target="_blank">Åpne Refleksjon (PDF)</a></p>
-            </section>
+            </article>
+
+            <article class="section-box">
+                <h3>Dokumentasjon</h3>
+                <p>Her finner du rapport, presentasjon og refleksjonsnotat.</p>
+                <ul style="list-style: none; padding: 0;">
+                    <li><a href="Lexoarm/Teambasert_endeligVurdering.pdf" target="_blank" class="btn-download btn-link">📄 Åpne Rapport (PDF)</a></li>
+                    <li style="margin-top: 10px;"><a href="Lexoarm/LEXOARM-Presentasjon.pdf" target="_blank" class="btn-download btn-link">📊 Åpne Presentasjon (PDF)</a></li>
+                    <li style="margin-top: 10px;"><a href="Lexoarm/refleksjon.pdf" target="_blank" class="btn-download btn-link">📝 Åpne Refleksjon (PDF)</a></li>
+                </ul>
+            </article>
         </div>
 
         <!-- DATAARKITEKTUR TAB -->
         <div id="data" class="tab-content">
             <h2>Dataarkitektur</h2>
-            <section class="section-box">
+            
+            <article class="section-box">
                 <h3>Rapport</h3>
-                <p><a href="Dataarkitektur/Rapport SSD (1).pdf" target="_blank">Åpne Rapport (PDF)</a></p>
-            </section>
-            <section class="section-box">
-                <h3>PowerPoint</h3>
-                <!-- PPTX MÅ lastes ned -->
-                <p>PowerPoint-filer kan ikke vises i nettleseren.</p>
-                <p><a href="Dataarkitektur/datamaskinArkitektur oppg.pptx" download>Last ned Presentasjon (PPTX)</a></p>
-            </section>
+                <p>Rapporten er tilgjengelig som PDF.</p>
+                <a href="Dataarkitektur/Rapport%20SSD%20(1).pdf" target="_blank" class="btn-download btn-link">📄 Åpne Rapport (PDF)</a>
+            </article>
+
+            <article class="section-box">
+                <h3>Presentasjon</h3>
+                <p>PowerPoint-filer må lastes ned for å vises.</p>
+                <a href="Dataarkitektur/datamaskinArkitektur oppg.pptx" download class="btn-download">📥 Last ned Presentasjon (PPTX)</a>
+            </article>
         </div>
     </main>
 
@@ -454,6 +665,7 @@ while True:
     </footer>
 
     <script>
+        // Main Tabs Logic
         const tabs = document.querySelectorAll('.tab');
         const contents = document.querySelectorAll('.tab-content');
 
@@ -466,6 +678,30 @@ while True:
                 document.getElementById(tab.dataset.tab).classList.add('active');
             });
         });
+
+        // Sub-tabs Logic (for Code/Reflection)
+        function openSubTab(evt, subTabName) {
+            // Finn containeren (article) som knappen tilhører
+            var container = evt.currentTarget.closest('.section-box');
+            
+            // Skjul alle sub-tab-content i denne containeren
+            var subContents = container.getElementsByClassName("sub-tab-content");
+            for (var i = 0; i < subContents.length; i++) {
+                subContents[i].style.display = "none";
+                subContents[i].classList.remove("active");
+            }
+
+            // Fjern active-klassen fra alle sub-tabs i denne containeren
+            var subTabs = container.getElementsByClassName("sub-tab");
+            for (var i = 0; i < subTabs.length; i++) {
+                subTabs[i].className = subTabs[i].className.replace(" active", "");
+            }
+
+            // Vis den valgte sub-taben og legg til active-klassen på knappen
+            document.getElementById(subTabName).style.display = "block";
+            document.getElementById(subTabName).classList.add("active");
+            evt.currentTarget.className += " active";
+        }
     </script>
 
 </body>
