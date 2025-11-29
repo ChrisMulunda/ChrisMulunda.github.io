@@ -230,11 +230,22 @@
             <article class="section-box" id="oppgave1-container">
                 <h3>Oppgave 1</h3>
                 <div class="sub-tabs">
-                    <div class="sub-tab active" onclick="openSubTab(event, 'oppgave1-kode')">Kode</div>
+                    <div class="sub-tab active" onclick="openSubTab(event, 'oppgave1-beskrivelse')">Beskrivelse</div>
+                    <div class="sub-tab" onclick="openSubTab(event, 'oppgave1-kode')">Kode</div>
                     <div class="sub-tab" onclick="openSubTab(event, 'oppgave1-refleksjon')">Refleksjon</div>
                 </div>
 
-                <div id="oppgave1-kode" class="sub-tab-content active">
+                <div id="oppgave1-beskrivelse" class="sub-tab-content active">
+                    <h4>Oppgavebeskrivelse</h4>
+                    <p>Lag et Python-program for roboten. Programmet skal gjøre følgende:</p>
+                    <ul>
+                        <li>Ved start skal teksten «Hello World» vises på LCD-skjermen.</li>
+                        <li>Deretter skal robotbilen kjøre i et rektangulært mønster, og stoppe etter å ha kjørt én runde.</li>
+                        <li>Til slutt skal roboten si «Have a nice day» før den avslutter programmet.</li>
+                    </ul>
+                </div>
+
+                <div id="oppgave1-kode" class="sub-tab-content">
                     <a href="EV3Tasks/code/oppgave1.py" download class="btn-download">📥 Last ned filen</a>
                     <pre><code>
 #!/usr/bin/env pybricks-micropython
@@ -316,11 +327,19 @@ ev3.screen.print("Exercise done")
             <article class="section-box" id="oppgave2-container">
                 <h3>Oppgave 2</h3>
                 <div class="sub-tabs">
-                    <div class="sub-tab active" onclick="openSubTab(event, 'oppgave2-kode')">Kode</div>
+                    <div class="sub-tab active" onclick="openSubTab(event, 'oppgave2-beskrivelse')">Beskrivelse</div>
+                    <div class="sub-tab" onclick="openSubTab(event, 'oppgave2-kode')">Kode</div>
                     <div class="sub-tab" onclick="openSubTab(event, 'oppgave2-refleksjon')">Refleksjon</div>
                 </div>
 
-                <div id="oppgave2-kode" class="sub-tab-content active">
+                <div id="oppgave2-beskrivelse" class="sub-tab-content active">
+                    <h4>Oppgavebeskrivelse</h4>
+                    <p>Bernt - gressklipperoboten på NTNU​ – har ferie og trenger derfor en vikar til å klippe plenen. Dere skal derfor lage en gressklipper-robot som kan steppe inn for Bernt. Roboten deres trenger ikke klippe noe som helst, dere trenger kun å sørge for at den kjører rundt på plenen på en fornuftig måte.</p>
+                    <p>Programmet til roboten skal kunne startes og stoppes med én trykksensor. I tillegg skal dere bruke enten en trykksensor eller en ultralydsensor for å unngå trærne som står på plenen.</p>
+                    <p>Når man trykker på av/på-knappen skal roboten si «Exercise 2» og deretter begynne og kjøre. Dersom roboten møter på en hindring skal den svinge litt, og deretter fortsette å kjøre rundt. Når av/på-knappen trykkes på igjen skal roboten stoppe, si «Exercise done», og programmet skal avsluttes.</p>
+                </div>
+
+                <div id="oppgave2-kode" class="sub-tab-content">
                     <a href="EV3Tasks/code/oppgave2.py" download class="btn-download">📥 Last ned filen</a>
                     <pre><code>
 #!/usr/bin/env pybricks-micropython
@@ -389,12 +408,6 @@ while True:
                     </code></pre>
                 </div>
                 <div id="oppgave2-refleksjon" class="sub-tab-content">
-                    <h4>Oppgavebeskrivelse</h4>
-                    <p>Bernt - gressklipperoboten på NTNU​ – har ferie og trenger derfor en vikar til å klippe plenen. Dere skal derfor lage en gressklipper-robot som kan steppe inn for Bernt. Roboten deres trenger ikke klippe noe som helst, dere trenger kun å sørge for at den kjører rundt på plenen på en fornuftig måte.</p>
-                    <p>Programmet til roboten skal kunne startes og stoppes med én trykksensor. I tillegg skal dere bruke enten en trykksensor eller en ultralydsensor for å unngå trærne som står på plenen.</p>
-                    <p>Når man trykker på av/på-knappen skal roboten si «Exercise 2» og deretter begynne og kjøre. Dersom roboten møter på en hindring skal den svinge litt, og deretter fortsette å kjøre rundt. Når av/på-knappen trykkes på igjen skal roboten stoppe, si «Exercise done», og programmet skal avsluttes.</p>
-                    
-                    <h4>Refleksjon</h4>
                     <p>Her kan du skrive din refleksjon for Oppgave 2.</p>
                 </div>
             </article>
@@ -403,11 +416,19 @@ while True:
             <article class="section-box" id="oppgave3-container">
                 <h3>Oppgave 3</h3>
                 <div class="sub-tabs">
-                    <div class="sub-tab active" onclick="openSubTab(event, 'oppgave3-kode')">Kode</div>
+                    <div class="sub-tab active" onclick="openSubTab(event, 'oppgave3-beskrivelse')">Beskrivelse</div>
+                    <div class="sub-tab" onclick="openSubTab(event, 'oppgave3-kode')">Kode</div>
                     <div class="sub-tab" onclick="openSubTab(event, 'oppgave3-refleksjon')">Refleksjon</div>
                 </div>
 
-                <div id="oppgave3-kode" class="sub-tab-content active">
+                <div id="oppgave3-beskrivelse" class="sub-tab-content active">
+                    <h4>Oppgavebeskrivelse</h4>
+                    <p>Mens roboten deres vikarierer for Bernt skal den årlige robot-revyen avholdes på Gjøvik. Bernt lurer derfor på om du kan steppe inn og ta underholdningen han pleier å gjøre. Bernt pleier å kjøre rundt i en liten firkant. Firkanten er markert med en svart strek (15 mm bred) og har avrundede hjørner, så dere må bruke fargesensoren til å følge etter denne streken. Dere skal til å kjøre mot klokka.</p>
+                    <p>Mens roboten deres kjører langs banen skal den stoppe hvert tiende sekund og underholde publikum. Dere kan selv velge hva dere har lyst til å gjøre på disse stoppene, det kan være alt fra å spille av lyd fra høyttaleren til roboten til å få den til å danse. Dere må implementere minst fire forskjellige underholdnings-bidrag, men ved hvert stopp skal det velges tilfeldig hvilket roboten deres faktisk utfører.</p>
+                    <p>Når underholdningsnummeret til roboten deres nærmer seg slutten kommer det til å, på magisk vis, dukke opp en hindring foran den på banen. Roboten deres skal stoppe 5 - 20 cm fra denne hindringen, og spille av enten lyden «CHEERING» eller «FANFARE».</p>
+                </div>
+
+                <div id="oppgave3-kode" class="sub-tab-content">
                     <a href="EV3Tasks/code/oppgave3.py" download class="btn-download">📥 Last ned filen</a>
                     <pre><code>
 #!/usr/bin/env pybricks-micropython
@@ -481,11 +502,17 @@ while True:
             <article class="section-box" id="oppgave4-container">
                 <h3>Oppgave 4</h3>
                 <div class="sub-tabs">
-                    <div class="sub-tab active" onclick="openSubTab(event, 'oppgave4-kode')">Kode</div>
+                    <div class="sub-tab active" onclick="openSubTab(event, 'oppgave4-beskrivelse')">Beskrivelse</div>
+                    <div class="sub-tab" onclick="openSubTab(event, 'oppgave4-kode')">Kode</div>
                     <div class="sub-tab" onclick="openSubTab(event, 'oppgave4-refleksjon')">Refleksjon</div>
                 </div>
 
-                <div id="oppgave4-kode" class="sub-tab-content active">
+                <div id="oppgave4-beskrivelse" class="sub-tab-content active">
+                    <h4>Oppgavebeskrivelse</h4>
+                    <p>Her kan du legge inn beskrivelsen for Oppgave 4.</p>
+                </div>
+
+                <div id="oppgave4-kode" class="sub-tab-content">
                     <a href="EV3Tasks/code/oppgave4.py" download class="btn-download">📥 Last ned filen</a>
                     <pre><code>
 #!/usr/bin/env pybricks-micropython
