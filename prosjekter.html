@@ -230,7 +230,6 @@
                 <div class="sub-tabs">
                     <div class="sub-tab active" onclick="openSubTab(event, 'oppgave1-beskrivelse')">Beskrivelse</div>
                     <div class="sub-tab" onclick="openSubTab(event, 'oppgave1-kode')">Kode</div>
-                    <div class="sub-tab" onclick="openSubTab(event, 'oppgave1-refleksjon')">Refleksjon</div>
                 </div>
 
                 <div id="oppgave1-beskrivelse" class="sub-tab-content active">
@@ -314,10 +313,6 @@ ev3.speaker.say("Exercise done")
 ev3.screen.print("Exercise done")
                     </code></pre>
                 </div>
-                <div id="oppgave1-refleksjon" class="sub-tab-content">
-                    <p>Her kan du skrive din refleksjon for Oppgave 1.</p>
-                    <p>Eksempel: I denne oppgaven lærte jeg hvordan man bruker ultralydsensoren til å unngå hindringer...</p>
-                </div>
             </article>
 
             <!-- Oppgave 2 -->
@@ -326,7 +321,6 @@ ev3.screen.print("Exercise done")
                 <div class="sub-tabs">
                     <div class="sub-tab active" onclick="openSubTab(event, 'oppgave2-beskrivelse')">Beskrivelse</div>
                     <div class="sub-tab" onclick="openSubTab(event, 'oppgave2-kode')">Kode</div>
-                    <div class="sub-tab" onclick="openSubTab(event, 'oppgave2-refleksjon')">Refleksjon</div>
                 </div>
 
                 <div id="oppgave2-beskrivelse" class="sub-tab-content active">
@@ -403,9 +397,6 @@ while True:
     wait(50)
                     </code></pre>
                 </div>
-                <div id="oppgave2-refleksjon" class="sub-tab-content">
-                    <p>Her kan du skrive din refleksjon for Oppgave 2.</p>
-                </div>
             </article>
 
             <!-- Oppgave 3 -->
@@ -414,7 +405,6 @@ while True:
                 <div class="sub-tabs">
                     <div class="sub-tab active" onclick="openSubTab(event, 'oppgave3-beskrivelse')">Beskrivelse</div>
                     <div class="sub-tab" onclick="openSubTab(event, 'oppgave3-kode')">Kode</div>
-                    <div class="sub-tab" onclick="openSubTab(event, 'oppgave3-refleksjon')">Refleksjon</div>
                 </div>
 
                 <div id="oppgave3-beskrivelse" class="sub-tab-content active">
@@ -488,9 +478,6 @@ while True:
         break
                     </code></pre>
                 </div>
-                <div id="oppgave3-refleksjon" class="sub-tab-content">
-                    <p>Her kan du skrive din refleksjon for Oppgave 3.</p>
-                </div>
             </article>
 
             <!-- Oppgave 4 -->
@@ -499,7 +486,6 @@ while True:
                 <div class="sub-tabs">
                     <div class="sub-tab active" onclick="openSubTab(event, 'oppgave4-beskrivelse')">Beskrivelse</div>
                     <div class="sub-tab" onclick="openSubTab(event, 'oppgave4-kode')">Kode</div>
-                    <div class="sub-tab" onclick="openSubTab(event, 'oppgave4-refleksjon')">Refleksjon</div>
                 </div>
 
                 <div id="oppgave4-beskrivelse" class="sub-tab-content active">
@@ -551,7 +537,7 @@ def Drive(): #This function drives the machine
         if right_sensor == Color.WHITE and left_sensor == Color.WHITE:
             came_back = True
             driving_left = False
-    elif right_sensor == Color.BLACK and left_sensor == Color.WHITE: # right sees black, left sees white (too far to the left)
+    elif right_sensor == Color_BLACK and left_sensor == Color.WHITE: # right sees black, left sees white (too far to the left)
         came_back = False
         driving_right = True
         right_motor.run(SWING_SPEED)
@@ -584,9 +570,13 @@ while program: #while our program is true
     Drive()
                     </code></pre>
                 </div>
-                <div id="oppgave4-refleksjon" class="sub-tab-content">
-                    <p>Her kan du skrive din refleksjon for Oppgave 4.</p>
-                </div>
+            </article>
+
+            <!-- Felles Refleksjon -->
+            <article class="section-box">
+                <h3>Felles Refleksjon</h3>
+                <p>Praktisk erfaring med robotikk, sensortilbakemeldinger og kontrollogikk. Jeg øvde på å justere terskelverdier, tilpasse motorhastigheter, teste logiske mønstre og balansere hastighet mot nøyaktighet.</p>
+                <p>Prosjektet styrket mine ferdigheter innen feilsøking, algoritmeoptimalisering og samarbeid – noe som er direkte relevant for praktisk problemløsning innen IT og datasikkerhet under gitte rammer.</p>
             </article>
         </div>
 
